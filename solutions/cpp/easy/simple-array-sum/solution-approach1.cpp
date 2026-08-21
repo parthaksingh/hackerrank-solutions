@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-08-22, 03:37 a.m.
+// Technique   linear-accumulation-loop
+// Time        O(n)
+// Space       O(n)
+// Insight     The function iterates through the input vector once, maintaining a running total of all elements to compute the final sum.
+// Interview   Before: "I would use a recursive approach to sum the array." After: "An iterative approach is more efficient here, providing O(n) time complexity and O(n) space complexity due to the input vector storage, which is optimal for processing the entire array once."
+// Pitfalls    (1) Integer overflow may occur if the sum of array elements exceeds the capacity of a 32-bit signed integer.  (2) The split function assumes space-separated input, which may fail if the input format contains unexpected delimiters.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
