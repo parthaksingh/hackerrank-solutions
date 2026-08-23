@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-08-23, 04:55 p.m.
+# Technique   basic-arithmetic-operations
+# Time        O(1)
+# Space       O(1)
+# Insight     The implementation performs standard arithmetic operations on two integers read from standard input and prints the results sequentially.
+# Interview   Before: "How do I perform basic math on user input?" After: "You read the inputs as integers and apply the operators directly. This approach runs in O(1) time and O(1) space, handling the required sum, difference, and product operations efficiently."
+# Pitfalls    (1) Failing to cast input strings to integers using int() will result in TypeError or incorrect string concatenation.  (2) Assuming the input format provides both integers on a single line when the problem specifies two separate lines.
 # ──────────────────────────────────────────────────
 
 a = int(input())
