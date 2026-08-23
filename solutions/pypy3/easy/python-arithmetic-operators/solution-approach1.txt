@@ -1,0 +1,18 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/python-arithmetic-operators/problem?isFullScreen=true
+# Problem     Arithmetic Operators
+# Difficulty  Easy
+# Subdomain   Introduction
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-08-23, 04:55 p.m.
+# ──────────────────────────────────────────────────
+
+a = int(input())
+b = int(input())
+
+
+print(a+b)
+print(a-b)
+print(a*b)   
