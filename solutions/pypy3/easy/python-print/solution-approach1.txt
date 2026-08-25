@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-08-25, 06:02 p.m.
+# Technique   range-loop-end-parameter
+# Time        O(n)
+# Space       O(1)
+# Insight     The implementation iterates from one to n inclusive, printing each integer sequentially without a trailing newline or space separator.
+# Interview   Before: "I would convert the range to a string and join it." After: "By using the end parameter in the print function, I avoid string methods and achieve O(n) time complexity while maintaining O(1) space, correctly handling the inclusive range up to n."
+# Pitfalls    (1) Using range(n) instead of range(1, n + 1) results in missing the final integer n.  (2) Including a default newline or space in the print function violates the requirement to print the sequence as a single string without separators.
 # ──────────────────────────────────────────────────
 
 if __name__ == '__main__':
