@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-08-25, 05:58 p.m.
+# Technique   conditional-logic-branching
+# Time        O(1)
+# Space       O(1)
+# Insight     The function evaluates the Gregorian calendar leap year conditions by prioritizing the 400-year rule, followed by the 100-year exclusion, and finally the 4-year inclusion.
+# Interview   Before: "How would you determine if a year is a leap year?" After: "I implemented the Gregorian logic using conditional branches to check divisibility by 400, 100, and 4 sequentially, ensuring O(1) time complexity for any given year."
+# Pitfalls    (1) Incorrectly ordering the conditions, such as checking divisibility by 4 before 400, which would incorrectly identify 1900 as a leap year.  (2) Failing to account for the 100-year exception rule, which overrides the standard 4-year leap cycle.
 # ──────────────────────────────────────────────────
 
 def is_leap(year):
