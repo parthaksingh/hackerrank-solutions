@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-08-26, 11:59 p.m.
+// Technique   linear-scan-comparison
+// Time        O(1)
+// Space       O(1)
+// Insight     The algorithm iterates through the fixed-size triplets once, incrementing the respective score counter only when a strict inequality between corresponding elements is satisfied.
+// Interview   Before: "I would use a hash map to count occurrences of each rating." After: "Since the input size is fixed at three, a simple linear scan with two counters is optimal, achieving O(1) time and O(1) space complexity."
+// Pitfalls    (1) Failing to handle the equality case where neither Alice nor Bob receives a point.  (2) Assuming the input size is variable when the problem statement explicitly defines triplets of size three.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
