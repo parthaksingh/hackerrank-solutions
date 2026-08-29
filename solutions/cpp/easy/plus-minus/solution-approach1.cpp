@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-08-30, 12:00 a.m.
+// Technique   linear-scan-counter
+// Time        O(n)
+// Space       O(n)
+// Insight     The algorithm maintains three independent counters to track the frequency of positive, negative, and zero integers during a single pass over the input array.
+// Interview   Before: "I would use three separate loops to count each category." After: "I can optimize this to a single O(n) pass by incrementing counters based on the sign of each element, ensuring the final ratios are calculated with the required precision."
+// Pitfalls    (1) Failure to cast the integer count to double before division results in integer division, causing the ratio to truncate to zero.  (2) Omitting the fixed and setprecision(6) manipulators leads to incorrect output formatting, failing the requirement for six decimal places.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
