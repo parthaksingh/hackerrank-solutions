@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-09-03, 02:30 a.m.
+// Technique   sorting-and-linear-summation
+// Time        O(N log N)
+// Space       O(1)
+// Insight     The minimum sum is obtained by excluding the largest element, while the maximum sum is obtained by excluding the smallest element after sorting the array.
+// Interview   Before: "I would iterate through the array five times to find each subset sum." After: "Sorting the array allows us to identify the min and max elements in O(N log N) time, ensuring we handle the 64-bit integer requirement for the sums correctly."
+// Pitfalls    (1) Failing to use long long for sum variables, which causes integer overflow given the constraints.  (2) Assuming the input array is already sorted, which leads to incorrect min and max calculations.  (3) Incorrectly indexing the loops, which results in summing the wrong number of elements.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
