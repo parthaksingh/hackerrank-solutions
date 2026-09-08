@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-09-09, 01:07 a.m.
+// Technique   iterative-conditional-range-mapping
+// Time        O(b - a)
+// Space       O(1)
+// Insight     The implementation iterates through the inclusive range [a, b] and applies conditional logic to map integers 1-9 to their English names while classifying integers greater than 9 based on parity.
+// Interview   Before: "How would you handle mapping integers to strings and parity checks in a loop?" After: "I used a simple for loop from a to b with if-else blocks. This runs in O(b - a) time and O(1) space, correctly handling the inclusive range requirement."
+// Pitfalls    (1) Failing to include the upper bound b in the loop condition, which violates the inclusive interval requirement.  (2) Incorrectly ordering the conditional checks, which would cause numbers greater than 9 to be misidentified as English words.  (3) Using an incorrect parity check for numbers greater than 9, failing to distinguish between even and odd values as specified.
 // ──────────────────────────────────────────────────
 
 #include <iostream>
